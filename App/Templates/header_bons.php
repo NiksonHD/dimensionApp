@@ -14,11 +14,11 @@
             
             
             
-            <a href="menu_page.php">Home</a>
+            <a href="../warehouse_app/index.php">Home</a>
             <!--<a href="findTiles.php">ТЪРСЕНЕ</a>-->
-            <a href="edit_article_dimensions.php">Въвеждане размери</a>
-            <!--<a href="export_data.php">Export</a>-->
-            <!--<a href="tile/edit">CHG</a>-->
+            <a href="insert_bon.php">Въвеждане</a>
+            <a href="show_bons.php">Bons</a>
+            <a href="menu_page.php">M</a>
             <!--<a href="edit.php">CHG</a>-->
             <!--<a href="profile.php">[]</a>-->
             <!--<a href="logout.php">Logout</a>-->

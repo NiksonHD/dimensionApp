@@ -14,7 +14,7 @@
 <?php foreach ($errors as $error): ?>
             <p style="color: red"><?= $error ?></p>
         <?php endforeach; ?>
-<form method="post" Onload='document.getElementById("tileNumber").focus()' >
+<form method="post" onload='consol.log(document.getElementById("ean").focus())' >
     <!--<button onclick="document.location = 'easy_list.php'" type="button">Направи списък</button>-->
     <table>
         <tr >
@@ -31,7 +31,7 @@
         </tr>
 
     </table>
-
+</form>
     <div>
         
 
@@ -39,6 +39,8 @@
 </div>
 
 </main>
+</<body>
+
 
 
 

@@ -14,8 +14,8 @@ class ArticleHttpHandler extends UserHttpHandlerAbstract {
             $this->handleEditProcess($articleService, $formData);
         } else {
             $article = $this->dataBinder->bind($formData, ArticleDimensionsDTO::class);
-//            var_dump($article);exit;
             $this->render("articles/edit_article", $article, ['error' => null]);
+            
         }
     }
 

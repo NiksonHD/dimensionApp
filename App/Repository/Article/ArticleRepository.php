@@ -54,7 +54,7 @@ class ArticleRepository extends \App\Data\DatabaseAbstract implements ArticleRep
 
     public function getOneByEan($ean) {
         return $this->db->query('SELECT '
-                . 'ean, width, length, height, weight, update_date as updateDate FROM article_dimension WHERE ean = ?')
+                . ' id, ean, width, length, height, weight, update_date as updateDate FROM article_dimension WHERE ean = ?')
                 ->execute([$ean])
                 ->fetchOne(\App\Data\ArticleDimensionsDTO::class);
         

@@ -5,7 +5,7 @@ namespace App\Http;
 use Core\TemplateInterface;
 use Core\DataBinderInterface;
 use App\Data\ErrorDTO;
-abstract class UserHttpHandlerAbstract {
+abstract class HttpHandlerAbstract {
 
     /**
      *
