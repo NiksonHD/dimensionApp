@@ -44,4 +44,14 @@ class PersonRepository extends DatabaseAbstract implements PersonRepositoryInter
             ")->execute([$DTO->getId()]);
     }
 
+    public function getLasrInsertId() {
+        $result = $this->db->query('
+            Select id FROM person ORDER BY id DESC LIMIT 1
+                ')->execute()
+                ->fetchAssoc();
+        return $result;
+        
+        
+    }
+
 }

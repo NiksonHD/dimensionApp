@@ -12,4 +12,7 @@ public function addPerson(\App\Data\PersonDTO $DTO);
 public function findOne($personName);
 
 public function delete(\App\Data\PersonDTO $DTO);
+
+public function getLasrInsertId();
+
 }

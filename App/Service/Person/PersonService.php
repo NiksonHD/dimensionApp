@@ -23,7 +23,12 @@ class PersonService implements PersonServiceInterface {
     public function insertPerson(\App\Data\PersonDTO $DTO) {
         $person = $this->personRepository->findOne($DTO->getPersonName());
         if (!$person) {
-            return $this->personRepository->addPerson($DTO);
+            $this->personRepository->addPerson($DTO);
+            $id = $this->personRepository->getLasrInsertId();
+            foreach ($id as $idFached) {
+                return $idFached['id'];
+//                return $this->articleRepository->getOneById($articleId);
+            }
         } else {
             throw new \Exception('Има записанo вече Заглавие: ' . $DTO->getPersonName());
         }

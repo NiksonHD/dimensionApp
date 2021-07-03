@@ -23,8 +23,8 @@ class PersonHttpHanler extends HttpHandlerAbstract {
             
         try {
             $person = $this->dataBinder->bind($formData, PersonDTO::class);
-            $result = $personService->insertPerson($person);
-
+            $id = $personService->insertPerson($person);
+            $_SESSION['personId'] = $id;
             $this->redirect('/dimensionApp/insert_bon.php');
         } catch (Exception $ex) {
             $this->render('person/insert_person', null, ['error' => $ex->getMessage()]);
@@ -46,6 +46,7 @@ class PersonHttpHanler extends HttpHandlerAbstract {
             $person = $this->dataBinder->bind($formData, PersonDTO::class);
             $fiscalService->delete($person->getId());
             $result = $personService->deletePerson($person);
+            
 
             $this->redirect('/dimensionApp/delete_person.php');
         } catch (Exception $ex) {
